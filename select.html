@@ -1,0 +1,19 @@
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="js/lib/angular.min.js"></script>
+    <script src="js/app-select.js"></script>
+  </head>
+  <body>
+    <div ng-controller="selectCtrl">
+      <select ng-model="fruitSort" ng-options="data.id as data.label for data in fruitSortMap">
+      </select>
+      <br>
+      <div fruit-select db-fruit-sort="fruitSort">
+      {{fruitSort}}<br>
+      選択したvalue {{friutSortValue}}<br>
+      選択したorder {{friutSortOrder}}<br>
+      </div>
+    </div>
+  </body>
+</html>
